@@ -13,7 +13,7 @@
   <svg width="500px" height="500px" class="area">
     <rect id="object1" x="10" y="10" width="20" height="20" fill="black" />
   </svg>
-  <script>refresh();</script>
+  <script>refreshPosition();</script>
 </body>
 <script type="text/javascript">
 	// Declare and assign variables.
@@ -50,7 +50,7 @@
 	  }
 	}
 
-	function refresh() {
+	function refreshPosition() {
 	  let x = position.x - (object1Size.width/2);
 	  let y = position.y - (object1Size.height/2);
 	  let transform = "translate(" + x + " " + y + ")";
@@ -75,7 +75,7 @@
 	      // Handle "right"
 	      updateXPosition(moveRate);
 	  }
-	  refresh();
+	  refreshPosition();
 	  event.preventDefault();
 	}, true);
 
